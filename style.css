@@ -1,122 +1,90 @@
+/* Подключение шрифта */
 @font-face {
     font-family: 'Bounded-Regular';
     src: url('Bounded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Общие стили */
 body {
     font-family: 'Bounded-Regular', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
 
-header {
-    position: relative;
-}
-
-.main-image {
-    position: relative;
-    background-image: url('school.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('school.jpg');
-    background-size: cover;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.overlay h1 {
-    color: white;
-    font-size: 36px;
-}
-
-.logo {
+/* Логотип */
+.logo-image {
+    width: 250px; /* Размер логотипа */
+    height: auto;
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
 }
 
-.logo img {
-    width: 80px;
-    height: auto;
+/* Основное изображение с текстом */
+.main-image {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
 }
 
-#about-school {
+.title {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.title h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.title p a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Секция о школе */
+.about-school {
     padding: 20px;
-    background-color: #faf1e6; /* Бежевый фон */
+    background-color: white;
 }
 
-#about-school h2 {
+.about-school h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-#about-school p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-#full-description {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.show-more {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+.full-description-toggle {
+    color: #007BFF;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-.show-more:hover {
-    background-color: #333;
+.full-description {
+    display: none;
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    padding: 10px;
 }
 
+.full-description p {
+    margin: 0;
+}
+
+/* Футер */
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 40px;
 }
 
 footer p {
-    font-size: 14px;
-}
-body {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Быстрая анимация плавного появления */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-#school-logo {
-    width: 200px;  /* Увеличиваем размер логотипа */
-    height: auto;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    margin: 0;
 }
