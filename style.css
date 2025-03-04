@@ -1,48 +1,43 @@
-/* Основные стили */
-body {
-    font-family: 'Bounded-Regular', sans-serif;
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     box-sizing: border-box;
+    font-family: 'Bounded-Regular', sans-serif;
 }
 
-/* Логотип и заголовок */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    position: relative;
-}
-
-header .logo img {
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-}
-
-header .header-text h1 {
-    margin: 0;
-    font-size: 24px;
+body {
+    background-color: #f8f8f8;
     color: #333;
+    font-size: 16px;
+    opacity: 0; /* Начальное состояние сайта — скрыт */
+    animation: fadeIn 0.5s ease-in forwards; /* Анимация появления */
 }
 
-header .header-text a {
-    color: #007BFF;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* Основное изображение с градиентом */
+/* Основной блок с фото и логотипом */
 .main-image {
     position: relative;
     width: 100%;
-    height: 400px; /* Устанавливаем фиксированную высоту */
-    background-image: url('school.jpg');
-    background-position: center center;
-    background-size: cover; /* Изображение будет покрывать элемент */
+    height: 50vh;
+    background: url('School.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.logo img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: auto;
+}
+
+.school-title {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .gradient-overlay {
@@ -51,123 +46,62 @@ header .header-text a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 }
 
-/* Описание */
+/* Описание школы */
 .description {
-    padding: 40px 20px;
-    background-color: #f0e8d0;
+    background-color: #f3e4d1;
+    padding: 20px;
     border-radius: 10px;
     margin: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .intro-description {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #333;
-}
-
-.full-description {
-    display: none;
-    font-size: 16px;
+    font-size: 1.2rem;
     line-height: 1.6;
-    color: #333;
 }
 
-.read-more-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    text-align: center;
+.full-description-link {
+    font-size: 1.1rem;
+    color: #0056b3;
     text-decoration: none;
 }
 
-.read-more-btn:hover {
-    background-color: #0056b3;
+.full-description-link:hover {
+    text-decoration: underline;
 }
 
-/* Подвал */
+.full-description {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Биография */
+.biography {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f3e4d1;
+    border-radius: 10px;
+}
+
+/* Футер с копирайтом */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
-    color: #fff;
-    font-size: 14px;
+    color: white;
+    font-size: 1rem;
+    margin-top: 20px;
 }
 
-/* Адаптивность */
-@media screen and (max-width: 768px) {
-    header .header-text h1 {
-        font-size: 20px;
+/* Анимация плавного появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-
-    header .logo img {
-        width: 100px;
-    }
-
-    .description {
-        padding: 20px 10px;
-    }
-
-    .intro-description {
-        font-size: 16px;
-    }
-
-    .full-description {
-        font-size: 14px;
-    }
-
-    .read-more-btn {
-        padding: 8px 16px;
-    }
-
-    .main-image {
-        height: 300px; /* Уменьшаем высоту на мобильных устройствах */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header .header-text h1 {
-        font-size: 18px;
-    }
-
-    .main-image {
-        height: 250px; /* Ещё меньше высота для маленьких экранов */
-    }
-
-    .description {
-        padding: 15px 8px;
-    }
-
-    .intro-description {
-        font-size: 14px;
-    }
-
-    .full-description {
-        font-size: 12px;
-    }
-
-    .read-more-btn {
-        padding: 6px 12px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .main-image {
-        height: 500px; /* Увеличиваем высоту изображения для больших экранов */
-    }
-
-    header .header-text h1 {
-        font-size: 30px;
+    to {
+        opacity: 1;
     }
 }
