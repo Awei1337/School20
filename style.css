@@ -38,7 +38,7 @@ h1 {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 100px; /* Размер логотипа, можно настроить */
+    width: 200px; /* Увеличиваем размер логотипа */
     height: auto;
 }
 
@@ -68,10 +68,11 @@ h1 {
     text-decoration: underline;
 }
 
+/* Описание с более светлым бежевым фоном */
 .description-container {
     text-align: center;
     padding: 20px;
-    background-color: #f5e0b7; /* Бежевый фон */
+    background-color: #f9f1d3; /* Светлый бежевый цвет */
     margin-top: -30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
