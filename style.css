@@ -1,113 +1,82 @@
-/* Подключение шрифта WOFF */
-@font-face {
-    font-family: 'Bounded';
-    src: url('Bounded-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Общие стили */
 body {
-    font-family: 'Bounded', sans-serif;
+    font-family: 'Bounded-Regular', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #fff;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 30px;
+/* Логотип в левом верхнем углу */
+.logo img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px; /* Подкорректируйте размер логотипа */
 }
 
-/* Фото школы с градиентом */
-.school-photo {
+/* Стиль для основного текста */
+.header-text {
+    margin-left: 150px; /* Чтобы текст не накладывался на логотип */
+}
+
+/* Стиль для основной картинки */
+.main-image {
     position: relative;
     width: 100%;
     height: 500px;
-    background-image: url('school.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Добавляем градиент сверху */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('school.jpg');
+    overflow: hidden;
 }
 
-/* Логотип школы в левом верхнем углу */
-.school-logo {
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gradient-overlay {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 300px; /* Увеличиваем логотип */
-    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
-/* Текст поверх изображения */
-.school-photo .school-name {
-    position: absolute;
-    bottom: 50px;
-    left: 20px;
-    color: white;
-    font-size: 30px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-}
-
-.school-photo .biography-link {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    color: white;
-    font-size: 18px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    text-decoration: none;
-}
-
-.school-photo .biography-link:hover {
-    text-decoration: underline;
-}
-
-/* Описание с цветом ближе к белому */
-.description-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #fefefe; /* Очень светлый бежевый, почти белый */
-    margin-top: -30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Отступ между фото и описанием */
+/* Описание */
+.description {
+    background-color: #fdf8e2; /* Светлый бежевый фон */
+    padding: 30px;
 }
 
 .full-description {
     display: none;
     margin-top: 20px;
+}
+
+.read-more {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #45a049;
+}
+
+/* Стили для текста */
+.intro-description {
     font-size: 18px;
     line-height: 1.6;
 }
 
-.read-more {
-    color: #1a73e8;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-/* Стили для блока авторов */
-.authors {
+/* Авторский футер */
+footer {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
     color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 16px;
-    position: relative;
-    margin-top: 50px;
-}
-
-.authors a {
-    color: #1a73e8;
-    text-decoration: none;
-}
-
-.authors a:hover {
-    text-decoration: underline;
+    font-size: 14px;
 }
