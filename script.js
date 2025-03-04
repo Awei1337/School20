@@ -1,23 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const heroLink = document.querySelector('.hero-link');
-  
-  // При наведении
-  heroLink.addEventListener('mouseover', function() {
-    heroLink.style.color = "#007bff";  // меняем на синий цвет при наведении
-  });
-
-  // При уходе курсора
-  heroLink.addEventListener('mouseout', function() {
-    heroLink.style.color = "#fff";  // возвращаем белый цвет
-  });
-
-  // При нажатии (клик)
-  heroLink.addEventListener('mousedown', function() {
-    heroLink.style.color = "#0056b3";  // темно-синий при клике
-  });
-
-  // При отпускании кнопки мыши
-  heroLink.addEventListener('mouseup', function() {
-    heroLink.style.color = "#007bff";  // возвращаем синий цвет при отпускании
-  });
-});
+// Функция для переключения видимости полного описания
+function toggleDescription() {
+  var fullDescription = document.querySelector('.full-description');
+  var readMore = document.querySelector('.read-more');
+  if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
+    fullDescription.style.display = 'block';
+    readMore.textContent = 'Скрыть описание';
+  } else {
+    fullDescription.style.display = 'none';
+    readMore.textContent = 'Читать дальше';
+  }
+}
