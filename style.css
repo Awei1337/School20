@@ -1,106 +1,79 @@
-/* Общие стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bounded-Regular', sans-serif;
 }
 
 body {
-    background-color: #f8f8f8;
+    font-family: 'Bounded', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    font-size: 16px;
-    opacity: 0; /* Начальное состояние сайта — скрыт */
-    animation: fadeIn 0.5s ease-in forwards; /* Анимация появления */
 }
 
-/* Основной блок с фото и логотипом */
 .main-image {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    background: url('School.jpg') no-repeat center center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)), url('images/school.jpg');
     background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
 }
 
 .logo img {
+    width: 120px;
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 80px;
-    height: auto;
 }
 
-.school-title {
+.title {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     left: 20px;
-    font-size: 3rem;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+.content {
+    padding: 50px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 1.1em;
 }
 
-/* Описание школы */
-.description {
-    background-color: #f3e4d1;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
+.hidden {
+    display: none;
 }
 
-.intro-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.full-description-link {
-    font-size: 1.1rem;
-    color: #0056b3;
+a {
+    color: #007BFF;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.full-description-link:hover {
+a:hover {
     text-decoration: underline;
 }
 
-.full-description {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Биография */
-.biography {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f3e4d1;
-    border-radius: 10px;
-}
-
-/* Футер с копирайтом */
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: #333;
     color: white;
-    font-size: 1rem;
-    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
 
-/* Анимация плавного появления */
+footer p {
+    margin: 5px 0;
+}
+
+/* Анимация появления */
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
     to {
         opacity: 1;
     }
