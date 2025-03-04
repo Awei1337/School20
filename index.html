@@ -3,161 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Средняя школа №20 имени Исхака Раззакова</title>
+    <title>Средняя школа №20</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="school-logo.png" type="image/png">
-    <style>
-        @font-face {
-            font-family: 'Bounded-Regular';
-            src: url('Bounded-Regular.woff') format('woff');
-        }
-        
-        body {
-            font-family: 'Bounded-Regular', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            position: relative;
-        }
-
-        .main-image {
-            position: relative;
-            background-image: url('school.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .overlay h1 {
-            color: white;
-            font-size: 36px;
-        }
-
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        .logo img {
-            width: 80px;
-            height: auto;
-        }
-
-        #about-school {
-            padding: 20px;
-            background-color: #fafafa;
-        }
-
-        #about-school h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        #about-school p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        #full-description {
-            display: none;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-
-        .show-more {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #000;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .show-more:hover {
-            background-color: #333;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 14px;
-        }
-
-    </style>
+    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
-
     <header>
-        <div class="logo">
-            <img src="school-logo.png" alt="Логотип школы">
-        </div>
         <div class="main-image">
             <div class="overlay">
-                <h1>Средняя школа № 20 имени Исхака Раззакова</h1>
+                <h1>Средняя школа номер 20 имени Исхака Раззакова</h1>
+            </div>
+            <div class="logo">
+                <img src="school-logo.png" alt="School Logo">
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="about-school">
-            <h2>О школе:</h2>
-            <p>Школа-гимназия № 20 имени Исхака Раззакова в городе Ош — современное образовательное учреждение, рассчитанное на 720 ученических мест. Школа обладает современными классами, оборудованными по последнему слову техники, а также обширной спортивной базой. В учебном процессе особое внимание уделяется углублённому изучению математических и гуманитарных наук. Учебный процесс активно поддерживается информационно-образовательными технологиями.</p>
-            <p>Кроме того, школа имеет высококвалифицированных педагогов, участвующих в различных международных конкурсах и программах. Для студентов доступно разнообразие внеучебной деятельности: спортивные секции, клубы по интересам и художественная самодеятельность. Школа активно работает с родителями и местным сообществом, организуя различные мероприятия и встречи.</p>
+    <div id="about-school">
+        <h2>О школе:</h2>
+        <p>
+            Средняя школа №20 имени Исхака Раззакова - это образовательное учреждение с богатой историей. Наша школа
+            старается предоставлять качественное образование и проводить интересные мероприятия для учеников.
+        </p>
+        <p>
+            Биография Исхака Раззаковича Раззакова доступна на <a href="https://ru.wikipedia.org/wiki/Исхак_Раззакович_Раззаков" target="_blank">Википедии</a>.
+        </p>
 
-            <button class="show-more" onclick="toggleDescription()">Читать полное описание</button>
-
-            <div id="full-description">
-                <h2>Полное описание:</h2>
-                <p>Школа-гимназия № 20 имени Исхака Раззакова в городе Ош — современное образовательное учреждение, рассчитанное на 720 ученических мест. Её строительство началось в 2013 году, однако из-за нехватки финансирования было приостановлено и возобновлено лишь в 2022 году. Торжественное открытие школы состоялось 6 мая 2024 года с участием Президента Кыргызской Республики Садыра Жапарова.</p>
-                <p>Новая школа оснащена всеми необходимыми условиями для качественного образования и физического развития учащихся. На территории учреждения имеются беговая дорожка, площадки для волейбола, баскетбола и футбола, а также зона с гимнастическими тренажёрами и географическая площадка. Площадь основного здания составляет 7 090 квадратных метров.</p>
-                <p>Старое здание школы было признано аварийным после землетрясения в 2015 году, и ученики были временно переведены в школу-гимназию имени И. В. Панфилова. Теперь новое здание готово принять школьников и преподавателей, обеспечивая современную и безопасную образовательную среду.</p>
-                <p>Открытие этой школы является частью масштабной программы по улучшению образовательной инфраструктуры в Кыргызстане. За последние три года в стране построено 315 школ и 69 детских садов, что свидетельствует о приоритетности развития образования для государства.</p>
-            </div>
-        </section>
-    </main>
+        <div id="full-description">
+            <h3>Полное описание:</h3>
+            <p>
+                Средняя школа №20 была основана в начале 20 века и до сих пор является одним из крупнейших учебных заведений города.
+                Мы гордимся нашим обучением, которое включает в себя как теоретические, так и практические дисциплины.
+                Также мы активно развиваем спортивные секции и клубы.
+            </p>
+            <p>
+                В школе работает высококвалифицированный педагогический состав, который помогает ученикам достигать больших успехов
+                в учёбе. Мы всегда стремимся улучшить учебный процесс, внедряя новые методы обучения и активно участвующие в жизни города.
+            </p>
+        </div>
+        <a class="show-more" onclick="toggleDescription()">Читать полное описание</a>
+    </div>
 
     <footer>
-        <p>© 2025. Авторы: Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир.</p>
+        <p>&copy; 2025 Авторы: Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир</p>
     </footer>
-
-    <script>
-        function toggleDescription() {
-            const description = document.getElementById('full-description');
-            const showMoreButton = document.querySelector('.show-more');
-
-            if (description.style.display === "none" || description.style.display === "") {
-                description.style.display = "block";
-                showMoreButton.textContent = "Скрыть описание";
-            } else {
-                description.style.display = "none";
-                showMoreButton.textContent = "Читать полное описание";
-            }
-        }
-    </script>
 </body>
 </html>
