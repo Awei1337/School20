@@ -1,95 +1,100 @@
+/* Подключение шрифта WOFF */
 @font-face {
-  font-family: 'Bounded Regular';
-  src: url('Bounded-Regular.woff') format('woff');
+    font-family: 'Bounded';
+    src: url('Bounded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Общие стили */
 body {
-  font-family: 'Bounded Regular', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Bounded', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+.school-photo {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('school.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.hero {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+/* Текст поверх изображения */
+.school-photo .school-name {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.school-photo .biography-link {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    text-decoration: none;
 }
 
-.hero-link {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 5px;
+.school-photo .biography-link:hover {
+    text-decoration: underline;
 }
 
-.hero-link:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.gradient {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, #000, transparent);
-}
-
-.description {
-  background-color: #fff;
-  padding: 50px 0;
-}
-
-.intro-text {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.read-more {
-  font-size: 18px;
-  color: #007bff;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.read-more:hover {
-  text-decoration: underline;
+.description-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: -30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Отступ между фото и описанием */
 }
 
 .full-description {
-  display: none;
-  margin-top: 20px;
-  font-size: 18px;
-  line-height: 1.6;
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.footer-text {
-  text-align: center;
-  margin-top: 30px;
-  color: #888;
-  font-size: 14px;
+.read-more {
+    color: #1a73e8;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Стили для блока авторов */
+.authors {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.authors a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.authors a:hover {
+    text-decoration: underline;
 }
