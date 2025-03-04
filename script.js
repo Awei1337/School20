@@ -1,4 +1,8 @@
-function showFullDescription() {
+function toggleDescription() {
     const fullDescription = document.getElementById('full-description');
-    fullDescription.classList.remove('hidden');
+    if (fullDescription.classList.contains('hidden')) {
+        fullDescription.classList.remove('hidden');
+    } else {
+        fullDescription.classList.add('hidden');
+    }
 }
