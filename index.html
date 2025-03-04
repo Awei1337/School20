@@ -1,59 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Средняя школа №20</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Средняя школа №20</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'Bounded Regular';
+      src: url('Bounded-Regular.woff') format('woff');
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Фоновая анимация (круги) -->
-    <div class="background">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+  <header>
+    <div class="hero">
+      <img src="School.jpg" alt="Школа">
+      <a href="#description" class="hero-link">Подробнее о школе</a>
+      <div class="gradient"></div>
     </div>
+  </header>
+  
+  <section id="description" class="description">
+    <div class="container">
+      <p class="intro-text">Средняя школа номер 20, имени Исхака Раззакова — это учебное заведение, которое стремится предоставить учащимся высокий уровень образования, развивая их навыки и таланты...</p>
+      <a href="full-description.html" class="read-more">Читать дальше</a>
+    </div>
+  </section>
 
-    <!-- Заголовок -->
-    <header>
-        <h1>Средняя школа номер 20, имени <a href="https://ru.wikipedia.org/wiki/Раззаков,_Исхак" target="_blank">Исхака Раззакова</a></h1>
-    </header>
+  <footer>
+    <div class="container">
+      <p class="footer-text">© 2025 Школа №20</p>
+    </div>
+  </footer>
 
-    <!-- Фото школы -->
-    <section class="school-photo">
-        <img src="school.jpg" alt="Фото школы">
-    </section>
-
-    <!-- Описание школы -->
-    <section class="description">
-        <p>
-            Школа-гимназия №20 имени Исхака Раззакова в городе Ош — современное образовательное учреждение, рассчитанное на 720 ученических мест. 
-            Её строительство началось в 2013 году, однако из-за нехватки финансирования было приостановлено и возобновлено лишь в 2022 году. 
-            Торжественное открытие школы состоялось 6 мая 2024 года с участием Президента Кыргызской Республики Садыра Жапарова.
-        </p>
-        <p>
-            Новая школа оснащена всеми необходимыми условиями для качественного образования и физического развития учащихся. 
-            На территории учреждения имеются беговая дорожка, площадки для волейбола, баскетбола и футбола, а также зона с гимнастическими тренажёрами и географическая площадка. 
-            Площадь основного здания составляет 7 090 квадратных метров.
-        </p>
-        <p>
-            Старое здание школы было признано аварийным после землетрясения в 2015 году, и ученики были временно переведены в школу-гимназию имени И.В. Панфилова. 
-            Теперь новое здание готово принять школьников и преподавателей, обеспечивая современную и безопасную образовательную среду.
-        </p>
-        <p>
-            Открытие этой школы является частью масштабной программы по улучшению образовательной инфраструктуры в Кыргызстане. 
-            За последние три года в стране построено 315 школ и 69 детских садов, что свидетельствует о приоритетности развития образования для государства.
-        </p>
-    </section>
-
-    <!-- Авторы -->
-    <footer>
-        <p>Разработано: 2025. Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир.</p>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
