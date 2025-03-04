@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Школа №20</title>
+    <title>Школа №20 имени Исхака Раззакова</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="fonts/Bounded-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="icon" href="school-logo.png" type="image/png">
 </head>
-<body>
 
-    <header>
-        <div class="logo-container">
-            <img src="images/school-logo.png" alt="Logo" class="school-logo">
-        </div>
+<body>
+    <div class="container">
+        <!-- Главная картинка с фоновым изображением -->
         <div class="main-image" style="background-image: url('images/school.jpg');">
-            <div class="text-overlay">
-                <a href="https://ru.wikipedia.org/wiki/Исхак_Раззаков" class="school-name">Средняя школа номер 20 имени Исхака Раззакова</a>
+            <div class="content">
+                <h1 class="title">Средняя школа номер 20 имени <a href="https://ru.wikipedia.org/wiki/Исхак_Раззаков" class="link">Исхака Раззакова</a></h1>
+                <img src="school-logo.png" alt="School Logo" class="logo">
             </div>
         </div>
-    </header>
 
-    <main>
-        <section class="description">
-            <h2>О школе:</h2>
-            <p>Школа-гимназия № 20 имени Исхака Раззакова в городе Ош — современное образовательное учреждение, рассчитанное на 720 ученических мест.</p>
-            <a href="full-description.html" class="read-more">Читать дальше...</a>
-        </section>
-    </main>
+        <!-- Описание школы -->
+        <div class="description-container">
+            <h2 class="description-title">О школе:</h2>
+            <p class="description-text">Школа-гимназия № 20 имени Исхака Раззакова в городе Ош — современное образовательное учреждение, рассчитанное на 720 ученических мест. Её строительство началось в 2013 году. Торжественное открытие школы состоялось 6 мая 2024 года с участием Президента Кыргызской Республики Садыра Жапарова.</p>
+            <p class="full-description" id="full-description" style="display:none;">
+                Новая школа оснащена всеми необходимыми условиями для качественного образования и физического развития учащихся. На территории учреждения имеются беговая дорожка, площадки для волейбола, баскетбола и футбола, а также зона с гимнастическими тренажёрами и географическая площадка. Площадь основного здания составляет 7 090 квадратных метров.
+                Старое здание школы было признано аварийным после землетрясения в 2015 году, и ученики были временно переведены в школу-гимназию имени И. В. Панфилова. Теперь новое здание готово принять школьников и преподавателей, обеспечивая современную и безопасную образовательную среду.
+                Открытие этой школы является частью масштабной программы по улучшению образовательной инфраструктуры в Кыргызстане. За последние три года в стране построено 315 школ и 69 детских садов, что свидетельствует о приоритетности развития образования для государства.
+            </p>
+            <button onclick="toggleDescription()">Читать дальше</button>
+        </div>
+        
+        <!-- Информация об авторах -->
+        <footer>
+            <p>&copy; 2025. Авторы: Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир</p>
+        </footer>
+    </div>
 
-    <footer>
-        <p>&copy; 2025, Авторы: Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script>
+        function toggleDescription() {
+            const fullDescription = document.getElementById("full-description");
+            const button = document.querySelector("button");
+            if (fullDescription.style.display === "none") {
+                fullDescription.style.display = "block";
+                button.innerHTML = "Скрыть описание";
+            } else {
+                fullDescription.style.display = "none";
+                button.innerHTML = "Читать дальше";
+            }
+        }
+    </script>
 </body>
+
 </html>
