@@ -12,14 +12,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: white;
 }
 
 /* Логотип */
-.logo-image {
-    width: 100px; /* Размер логотипа */
+.logo img {
+    width: 80px; /* Уменьшил логотип */
     height: auto;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 20px;
 }
 
@@ -29,17 +30,23 @@ body {
     background-position: center;
     height: 400px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    
+    /* Градиент для затемнения */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('school.jpg');
 }
 
 .title {
     color: white;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    text-align: center;
 }
 
 .title h1 {
-    font-size: 40px;
+    font-size: 36px;
     margin: 0;
 }
 
@@ -53,6 +60,8 @@ body {
 .about-school {
     padding: 20px;
     background-color: white;
+    max-width: 800px;
+    margin: auto;
 }
 
 .about-school h2 {
@@ -69,7 +78,7 @@ body {
 .full-description {
     display: none;
     margin-top: 20px;
-    background-color: #f7f7f7;
+    background-color: #f0e6d2; /* Бежевый фон */
     padding: 10px;
 }
 
@@ -87,4 +96,14 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Анимация появления страницы */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 0.3s ease-in-out;
 }
