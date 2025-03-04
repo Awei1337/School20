@@ -16,7 +16,7 @@ body {
 
 /* Логотип */
 .logo-image {
-    width: 150px; /* Размер логотипа */
+    width: 100px; /* Размер логотипа */
     height: auto;
     position: absolute;
     top: 10px;
