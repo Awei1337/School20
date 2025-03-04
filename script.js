@@ -1,12 +1,12 @@
-document.querySelector('.read-more').addEventListener('click', function() {
+function toggleFullDescription() {
     const fullDescription = document.querySelector('.full-description');
-    
-    // Анимация
-    if (fullDescription.style.maxHeight) {
-        fullDescription.style.maxHeight = null;
-        this.textContent = 'Читать дальше';
+    const btn = document.querySelector('.read-more-btn');
+
+    if (fullDescription.style.display === 'block') {
+        fullDescription.style.display = 'none';
+        btn.textContent = 'Читать далее';
     } else {
-        fullDescription.style.maxHeight = fullDescription.scrollHeight + "px";
-        this.textContent = 'Скрыть';
+        fullDescription.style.display = 'block';
+        btn.textContent = 'Свернуть';
     }
-});
+}
