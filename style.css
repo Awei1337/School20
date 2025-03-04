@@ -17,7 +17,7 @@ body {
 
 /* Логотип */
 .logo img {
-    width: 80px; /* Уменьшил логотип */
+    width: 100px; /* Уменьшил логотип */
     height: auto;
     position: absolute;
     top: 15px;
