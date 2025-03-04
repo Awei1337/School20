@@ -113,3 +113,10 @@ body {
         opacity: 1;
     }
 }
+#school-logo {
+    width: 200px;  /* Увеличиваем размер логотипа */
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
