@@ -1,46 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Средняя школа №20</title>
-  <!-- Подключаем CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школа-гимназия №20</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bounded&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Bounded', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .school-photo {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url('school.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Текст поверх изображения */
+        .school-photo .school-name {
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            color: white;
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .school-photo .biography-link {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: white;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .school-photo .biography-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Остальные стили */
+        .description-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            margin-top: -30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-description {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: #1a73e8;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* Стили для блока авторов */
+        .authors {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            position: relative;
+            margin-top: 50px;
+        }
+        .authors a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .authors a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="hero">
-      <!-- Путь к изображению школы -->
-      <img src="school.jpg" alt="Школа">
-      <a href="#description" class="hero-link">Подробнее о школе</a>
-      <div class="gradient"></div>
-    </div>
-  </header>
-  
-  <section id="description" class="description">
-    <div class="container">
-      <p class="intro-text">Средняя школа номер 20, имени Исхака Раззакова — это учебное заведение, которое стремится предоставить учащимся высокий уровень образования, развивая их навыки и таланты. Школа оснащена современными спортивными и образовательными ресурсами, а её здания обновлены в рамках программы развития...</p>
-      
-      <!-- Кнопка для раскрытия полного текста -->
-      <a href="javascript:void(0);" class="read-more" onclick="toggleDescription()">Читать дальше</a>
 
-      <!-- Скрытое полное описание -->
-      <div class="full-description">
+    <!-- Фото школы с текстом и ссылкой -->
+    <div class="school-photo">
+        <div class="school-name">Средняя школа номер 20 имени Исхака Раззакова</div>
+        <a href="https://ru.wikipedia.org/wiki/Исхак_Раззаков" target="_blank" class="biography-link">Биография Исхака Раззакова</a>
+    </div>
+
+    <!-- Описание школы -->
+    <div class="description-container">
         <p>Школа-гимназия № 20 имени Исхака Раззакова в городе Ош — современное образовательное учреждение, рассчитанное на 720 ученических мест. Её строительство началось в 2013 году, однако из-за нехватки финансирования было приостановлено и возобновлено лишь в 2022 году. Торжественное открытие школы состоялось 6 мая 2024 года с участием Президента Кыргызской Республики Садыра Жапарова.</p>
-        <p>Новая школа оснащена всеми необходимыми условиями для качественного образования и физического развития учащихся. На территории учреждения имеются беговая дорожка, площадки для волейбола, баскетбола и футбола, а также зона с гимнастическими тренажёрами и географическая площадка. Площадь основного здания составляет 7 090 квадратных метров.</p>
-        <p>Старое здание школы было признано аварийным после землетрясения в 2015 году, и ученики были временно переведены в школу-гимназию имени И. В. Панфилова. Теперь новое здание готово принять школьников и преподавателей, обеспечивая современную и безопасную образовательную среду.</p>
-        <p>Открытие этой школы является частью масштабной программы по улучшению образовательной инфраструктуры в Кыргызстане. За последние три года в стране построено 315 школ и 69 детских садов, что свидетельствует о приоритетности развития образования для государства.</p>
-      </div>
+        <p><span class="read-more" onclick="toggleDescription()">Читать дальше</span></p>
+        <div class="full-description">
+            <p>Новая школа оснащена всеми необходимыми условиями для качественного образования и физического развития учащихся. На территории учреждения имеются беговая дорожка, площадки для волейбола, баскетбола и футбола, а также зона с гимнастическими тренажёрами и географическая площадка. Площадь основного здания составляет 7 090 квадратных метров.</p>
+            <p>Старое здание школы было признано аварийным после землетрясения в 2015 году, и ученики были временно переведены в школу-гимназию имени И. В. Панфилова. Теперь новое здание готово принять школьников и преподавателей, обеспечивая современную и безопасную образовательную среду.</p>
+            <p>Открытие этой школы является частью масштабной программы по улучшению образовательной инфраструктуры в Кыргызстане. За последние три года в стране построено 315 школ и 69 детских садов, что свидетельствует о приоритетности развития образования для государства.</p>
+        </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="container">
-      <p class="footer-text">© 2025 Авторы: Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир. </p>
+    <!-- Блок авторов -->
+    <div class="authors">
+    <p>&copy; 2025. Авторы: Тилекеев Алихан, Мендибаев Курманбек, Алымкулов Эмир. </p>
     </div>
-  </footer>
+        <p><a href="https://github.com/awei1337" target="_blank">GitHub репозиторий</a></p>
+    </div>
 
-  <!-- Подключаем JS -->
-  <script src="script.js"></script>
+    <!-- Скрипт для отображения/скрытия полного описания -->
+    <script>
+        function toggleDescription() {
+            var fullDescription = document.querySelector('.full-description');
+            var readMore = document.querySelector('.read-more');
+            if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
+                fullDescription.style.display = 'block';
+                readMore.textContent = 'Скрыть описание';
+            } else {
+                fullDescription.style.display = 'none';
+                readMore.textContent = 'Читать дальше';
+            }
+        }
+    </script>
+
 </body>
 </html>
