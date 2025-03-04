@@ -1,12 +1,5 @@
-function toggleFullDescription() {
-    const fullDescription = document.querySelector('.full-description');
-    const btn = document.querySelector('.read-more-btn');
-
-    if (fullDescription.style.display === 'block') {
-        fullDescription.style.display = 'none';
-        btn.textContent = 'Читать далее';
-    } else {
-        fullDescription.style.display = 'block';
-        btn.textContent = 'Свернуть';
-    }
-}
+// Простой скрипт для плавного перехода к полному описанию
+document.querySelector('.full-description-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('full-description').scrollIntoView({ behavior: 'smooth' });
+});
