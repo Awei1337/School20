@@ -1,12 +1,17 @@
-// Функция для переключения видимости полного описания
 function toggleDescription() {
-  var fullDescription = document.querySelector('.full-description');
-  var readMore = document.querySelector('.read-more');
-  if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
-    fullDescription.style.display = 'block';
-    readMore.textContent = 'Скрыть описание';
-  } else {
-    fullDescription.style.display = 'none';
-    readMore.textContent = 'Читать дальше';
-  }
+    var fullDescription = document.querySelector('.full-description');
+    var readMore = document.querySelector('.read-more');
+    
+    if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
+        fullDescription.style.display = 'block';
+        readMore.textContent = 'Скрыть описание';
+        fullDescription.innerHTML = `
+            <p>Новая школа оснащена всеми необходимыми условиями для качественного образования и физического развития учащихся. На территории учреждения имеются беговая дорожка, площадки для волейбола, баскетбола и футбола, а также зона с гимнастическими тренажёрами и географическая площадка. Площадь основного здания составляет 7 090 квадратных метров.</p>
+            <p>Старое здание школы было признано аварийным после землетрясения в 2015 году, и ученики были временно переведены в школу-гимназию имени И. В. Панфилова. Теперь новое здание готово принять школьников и преподавателей, обеспечивая современную и безопасную образовательную среду.</p>
+            <p>Открытие этой школы является частью масштабной программы по улучшению образовательной инфраструктуры в Кыргызстане. За последние три года в стране построено 315 школ и 69 детских садов, что свидетельствует о приоритетности развития образования для государства.</p>
+        `;
+    } else {
+        fullDescription.style.display = 'none';
+        readMore.textContent = 'Читать дальше';
+    }
 }
