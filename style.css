@@ -1,97 +1,100 @@
-/* Подключение шрифта в формате .woff */
 @font-face {
     font-family: 'Bounded-Regular';
-    src: url('fonts/Bounded-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Общие стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    src: url('Bounded-Regular.woff') format('woff');
 }
 
 body {
     font-family: 'Bounded-Regular', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-/* Главная картинка */
+header {
+    position: relative;
+}
+
 .main-image {
     position: relative;
-    height: 500px;
+    background-image: url('school.jpg');
     background-size: cover;
     background-position: center;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay h1 {
     color: white;
-}
-
-.content {
-    position: absolute;
-    z-index: 1;
-    text-align: center;
-}
-
-.title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.link {
-    color: white;
-    text-decoration: none;
-}
-
-.link:hover {
-    text-decoration: underline;
+    font-size: 36px;
 }
 
 .logo {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 60px;
+}
+
+.logo img {
+    width: 80px;
     height: auto;
 }
 
-/* Описание школы */
-.description-container {
-    margin: 20px;
+#about-school {
+    padding: 20px;
+    background-color: #fafafa;
 }
 
-.description-text {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+#about-school h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.read-more {
+#about-school p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#full-description {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.show-more {
     display: inline-block;
-    background-color: #333;
-    color: white;
+    margin-top: 20px;
     padding: 10px 20px;
-    text-decoration: none;
+    background-color: #000;
+    color: #fff;
     border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.read-more:hover {
-    background-color: #555;
+.show-more:hover {
+    background-color: #333;
 }
 
-/* Плавное появление сайта */
-body {
-    opacity: 0;
-    animation: fadeIn 0.7s forwards;
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+footer p {
+    font-size: 14px;
 }
