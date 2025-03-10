@@ -17,7 +17,7 @@ body {
 
 /* Логотип */
 .logo img {
-    width: 120px;
+    width: 150px;
     height: auto;
     position: absolute;
     top: 15px;
@@ -74,6 +74,7 @@ body {
     max-width: 100%;
     position: relative;
     margin: auto;
+    overflow: hidden;
 }
 
 .mySlides {
@@ -83,6 +84,7 @@ body {
 .mySlides img {
     width: 100%;
     height: auto;
+    transition: opacity 1s ease-in-out;
 }
 
 /* Блок о школе */
@@ -157,4 +159,4 @@ footer p {
 
 body {
     animation: fadeIn 0.3s ease-in-out;
-    }
+                                                }
