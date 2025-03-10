@@ -1,14 +1,18 @@
 @font-face {
     font-family: 'Bounded-Regular';
-    src: url('path_to_bounded_regular.woff') format('woff');
+    src: url('Bounded-Regular.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Bounded-Regular', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d;
-    color: white;
+    background-color: #000;
+    color: #fff;
 }
 
 header {
@@ -16,48 +20,113 @@ header {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
-    background-color: #1f1f1f;
-}
-
-.logo {
-    width: 250px; /* Увеличение размера логотипа */
-}
-
-.slider {
-    display: flex;
-    overflow: hidden;
     position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header img {
+    width: 150px;
+    transition: transform 0.5s ease;
+}
+
+header img:hover {
+    transform: scale(1.2);
+}
+
+main {
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+#slideshow {
     width: 100%;
     height: 400px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 
-.slider img {
+#slideshow .slides {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease-in-out;
+}
+
+#slideshow .slide {
+    width: 33.33%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#slideshow .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1s ease-in-out;
 }
 
-.slider-container {
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-
-.slider-container .slide {
-    min-width: 100%;
-}
-
-.slider-container:hover .slide {
-    transform: scale(1.05);
-}
-
-.button {
+#slideshow .controls {
     position: absolute;
     top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     transform: translateY(-50%);
+}
+
+#slideshow .controls button {
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
+    color: #fff;
     border: none;
+    padding: 10px;
+    font-size: 1.5rem;
     cursor: pointer;
-    }
+}
+
+#slideshow .controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#president-section {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#president-section img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+#president-section .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+footer p {
+    color: #bbb;
+        }
