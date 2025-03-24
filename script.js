@@ -1,29 +1,31 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Гамбургер-меню
-    const menuToggle = document.getElementById("menu-toggle");
-    const navbar = document.getElementById("navbar");
+document.addEventListener('DOMContentLoaded', function() {
+    let slides = document.querySelectorAll('.mySlides');
+    let currentSlide = 0;
 
-    menuToggle.addEventListener("click", function() {
-        navbar.style.display = (navbar.style.display === "block") ? "none" : "block";
-    });
-
-    // Кнопка "Показать описание"
-    const showDescBtn = document.getElementById("show-description");
-    const aboutSchool = document.getElementById("about-school");
-
-    showDescBtn.addEventListener("click", function() {
-        aboutSchool.style.display = "block";
-        showDescBtn.style.display = "none";
-    });
-
-    // Слайдшоу
-    let slideIndex = 0;
-    function showSlides() {
-        let slides = document.querySelectorAll(".mySlides");
-        slides.forEach(slide => slide.style.display = "none");
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].style.display = "block";
-        setTimeout(showSlides, 7000);
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
     }
-    showSlides();
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 7000); // Сменять слайды каждые 7 секунд
+
+    // Показывать/скрывать описание
+    const showDescriptionBtn = document.getElementById('show-description');
+    const fullDescription = document.getElementById('full-description');
+    
+    showDescriptionBtn.addEventListener('click', () => {
+        if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
+            fullDescription.style.display = 'block';
+        } else {
+            fullDescription.style.display = 'none';
+        }
+    });
+
+    showSlide(currentSlide); // Изначально показать первый слайд
 });
