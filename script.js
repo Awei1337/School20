@@ -1,31 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let slides = document.querySelectorAll('.mySlides');
-    let currentSlide = 0;
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slider .slides img');
+const totalSlides = slides.length;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? 'block' : 'none';
-        });
+function showSlides() {
+    for (let i = 0; i < totalSlides; i++) {
+        slides[i].style.display = "none";
     }
+    slideIndex++;
+    if (slideIndex > totalSlides) {slideIndex = 1}
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 7000); // Change image every 7 seconds
+}
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
+function moveSlide(n) {
+    slideIndex += n;
+    if (slideIndex > totalSlides) {slideIndex = 1}
+    if (slideIndex < 1) {slideIndex = totalSlides}
+    showCurrentSlide();
+}
+
+function showCurrentSlide() {
+    for (let i = 0; i < totalSlides; i++) {
+        slides[i].style.display = "none";
     }
+    slides[slideIndex - 1].style.display = "block";
+}
 
-    setInterval(nextSlide, 7000); // Сменять слайды каждые 7 секунд
-
-    // Показывать/скрывать описание
-    const showDescriptionBtn = document.getElementById('show-description');
-    const fullDescription = document.getElementById('full-description');
-    
-    showDescriptionBtn.addEventListener('click', () => {
-        if (fullDescription.style.display === 'none' || fullDescription.style.display === '') {
-            fullDescription.style.display = 'block';
-        } else {
-            fullDescription.style.display = 'none';
-        }
-    });
-
-    showSlide(currentSlide); // Изначально показать первый слайд
-});
+// Initialize the slideshow
+showSlides();
