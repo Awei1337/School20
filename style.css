@@ -1,117 +1,166 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: 'Bounded-Regular';
+    src: url('Bounded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общие стили */
 body {
-    font-family: 'Bounded-Regular', Arial, sans-serif;
+    font-family: 'Bounded-Regular', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    background-color: white;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Логотип */
+.logo img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    z-index: 2;
 }
 
-header .logo img {
-    height: 50px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar ul li {
-    display: inline;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.navbar ul li a:hover {
-    color: #f4f4f4;
-}
-
+/* Главная картинка */
 .main-image {
-    background-image: url('school.png');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 400px;
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.main-image h1 {
+.main-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+/* Текст поверх изображения */
+.title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.title h1 {
     font-size: 36px;
     margin: 0;
 }
 
-.slider {
-    position: relative;
-    max-width: 100%;
-    margin: 20px 0;
-}
-
-.slides img {
-    width: 100%;
-    display: none;
-}
-
-.slider-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-button {
-    background-color: rgba(0, 0, 0, 0.5);
+.title p a {
     color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+/* Слайдшоу */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
 }
 
+.mySlides {
+    display: none;
+    animation: slideFade 1s ease-in-out;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Анимация для слайдов */
+@keyframes slideFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Блок о школе */
 .about-school {
-    padding: 40px;
+    padding: 20px;
     background-color: white;
-    text-align: justify;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-school h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.full-description-toggle {
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .full-description {
     display: none;
-}
-
-button.toggle-btn {
     margin-top: 20px;
+    background-color: #f0e6d2;
     padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 
-button.toggle-btn:hover {
-    background-color: #444;
+.full-description p {
+    margin: 0;
 }
 
+/* Блок президента */
+.president-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #f0e6d2;
+    padding: 20px;
+}
+
+.president-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.quote {
+    font-size: 18px;
+    margin-left: 20px;
+    max-width: 600px;
+}
+
+/* Футер */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Анимация появления страницы */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
